@@ -28,9 +28,6 @@ def test_positive_required_fields_filled(browser):
     name_field = browser.find_element_by_id("fullname-name")
     name_field.send_keys(name)
 
-    patronymic_field = browser.find_element_by_id("fullname-patronymic")
-    patronymic_field.send_keys(patronymic)
-
     email_field = browser.find_element_by_id("email")
     email_field.send_keys(email)
 
@@ -93,3 +90,4 @@ def test_positive_all_fields_filled(browser):
         head_feedback = browser.find_element_by_tag_name('h4').text
 
     assert 'правительство' in head_feedback, 'У правительства обед, обращение не зарегистрировано'
+
